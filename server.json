@@ -1,0 +1,26 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.cavyro/cavyro",
+  "title": "Cavyro",
+  "description": "Telegram-native CRM for agents: contacts, deals, pipelines, campaigns, docs and reports.",
+  "version": "1.0.1",
+  "websiteUrl": "https://cavyro.com",
+  "repository": {
+    "url": "https://github.com/cherry-it/cavyro-mcp",
+    "source": "github",
+    "id": "1365459252"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://ai.cavyro.com/mcp"
+    }
+  ],
+  "icons": [
+    {
+      "src": "https://cavyro.com/web-app-manifest-512x512.png",
+      "mimeType": "image/png",
+      "sizes": ["512x512"]
+    }
+  ]
+}
