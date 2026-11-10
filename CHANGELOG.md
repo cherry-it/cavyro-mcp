@@ -2,6 +2,10 @@
 
 Versions match the `com.cavyro/cavyro` entry in the [MCP Registry](https://registry.modelcontextprotocol.io). The hosted server at `https://ai.cavyro.com/mcp` is updated continuously; a new version here means the registry listing changed.
 
+## 1.2.0 (2026-11-10)
+
+- Listing description now reads "Agentic CRM for teams that sell in chat": Cavyro covers WhatsApp, Instagram, LinkedIn, Messenger and Telegram, not only Telegram.
+
 ## 1.1.0 (2026-10-31)
 
 - Project management: projects, folders, task lists, tasks and subtasks, with bulk moves and the project tree in one call.
