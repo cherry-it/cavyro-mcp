@@ -2,8 +2,8 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "com.cavyro/cavyro",
   "title": "Cavyro",
-  "description": "Telegram-native CRM for agents: contacts, deals, projects, tasks, campaigns, docs and reports.",
-  "version": "1.1.0",
+  "description": "Agentic CRM for teams that sell in chat: unified inbox, contacts, deals, projects, tasks, reports.",
+  "version": "1.2.0",
   "websiteUrl": "https://cavyro.com",
   "repository": {
     "url": "https://github.com/cherry-it/cavyro-mcp",

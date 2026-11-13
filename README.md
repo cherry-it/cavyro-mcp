@@ -10,7 +10,7 @@
 [![Install in VS Code](https://img.shields.io/badge/VS_Code-Install_Server-0098FF?logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect/mcp/install?name=cavyro&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fai.cavyro.com%2Fmcp%22%2C%22headers%22%3A%7B%22Authorization%22%3A%22Bearer%20%24%7Binput%3Acavyro-token%7D%22%2C%22X-Workspace-Id%22%3A%22%24%7Binput%3Acavyro-workspace%7D%22%7D%7D&inputs=%5B%7B%22id%22%3A%22cavyro-token%22%2C%22type%22%3A%22promptString%22%2C%22description%22%3A%22Cavyro%20API%20token%22%2C%22password%22%3Atrue%7D%2C%7B%22id%22%3A%22cavyro-workspace%22%2C%22type%22%3A%22promptString%22%2C%22description%22%3A%22Cavyro%20workspace%20ID%22%7D%5D)
 [![Add to Cursor](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/en/install-mcp?name=cavyro&config=eyJ1cmwiOiJodHRwczovL2FpLmNhdnlyby5jb20vbWNwIiwiaGVhZGVycyI6eyJBdXRob3JpemF0aW9uIjoiQmVhcmVyIDx5b3VyLWFwaS10b2tlbj4iLCJYLVdvcmtzcGFjZS1JZCI6Ijx5b3VyLXdvcmtzcGFjZS1pZD4ifX0=)
 
-Cavyro is a Telegram-native CRM for agents and small sales teams: contacts, companies, deals, pipelines, projects and tasks, campaigns, docs and reports. This repository describes Cavyro's hosted [Model Context Protocol](https://modelcontextprotocol.io) server, listed in the [MCP Registry](https://registry.modelcontextprotocol.io) as `com.cavyro/cavyro`.
+Cavyro is an agentic CRM for teams that sell in chat: one inbox for WhatsApp, Instagram, LinkedIn, Messenger and Telegram, plus contacts, companies, deals, pipelines, projects and tasks, campaigns, docs and reports. This repository describes Cavyro's hosted [Model Context Protocol](https://modelcontextprotocol.io) server, listed in the [MCP Registry](https://registry.modelcontextprotocol.io) as `com.cavyro/cavyro`.
 
 The server is hosted, so there is nothing to install or run. Point your MCP client at it and it reads and acts on your Cavyro workspace with your permissions.
 
@@ -37,7 +37,7 @@ The server exposes a fixed set of nine generic tools over a resource and action 
 | `perform_action` | Any specialized non-CRUD action by slug: move a deal between stages, link records, bulk operations, comments, reports |
 | `load_guidance` | On-demand workflow guidance: create flows, custom fields, automations |
 
-**Covered domains:** deals, contacts, companies, pipelines and stages, projects with folders, task lists, tasks and subtasks, project reports, comments and reactions, activity feed, notifications, a personal My Work queue with mentions, workspaces, members, teams, groups, invitations, custom field definitions, automations, docs with their pages, reports, Google Calendar meetings, read-only Telegram chats and Telegram follow-up reminders.
+**Covered domains:** deals, contacts, companies, pipelines and stages, projects with folders, task lists, tasks and subtasks, project reports, comments and reactions, activity feed, notifications, a personal My Work queue with mentions, workspaces, members, teams, groups, invitations, custom field definitions, automations, docs with their pages, reports, Google Calendar meetings, and the unified inbox: WhatsApp, Instagram, LinkedIn, Messenger and Telegram conversations, with replies drafted or sent on your approval, follow-up reminders and inbox reports (reply speed, volume per channel).
 
 All tool responses share one envelope, `{ "data": ..., "pagination": ... }`, with `pagination` present only on paginated list results.
 
@@ -131,7 +131,8 @@ Once connected, ask your assistant in plain language. A few things that work wel
 - "Show my open deals sorted by value, then move the top one to Negotiation."
 - "Create a contact for Ana Petrović at Acme, phone +381…, and link her to the Acme company."
 - "Which deals in the Enterprise pipeline haven't had activity in 30 days?"
-- "Summarize the last week of the Telegram chat with Acme and add it as a comment on their deal."
+- "Summarize last week's WhatsApp conversation with Acme and add it as a comment on their deal."
+- "Which LinkedIn and Instagram chats are still waiting on a reply? Draft an answer to the oldest one."
 - "Add a custom field 'Lead source' to contacts and set it to 'Referral' on the contacts I just created."
 - "What's on my plate today? Then move every overdue task in the Website project to In progress."
 
